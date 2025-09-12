@@ -6,6 +6,20 @@
 // Color system
 
 // scss-docs-start gray-color-variables
+
+// ===自訂===
+$neutral-50:#e8e6e9;
+$neutral-100:#b8b1bb;
+$neutral-200:#958c9a;
+$neutral-300:#65576c;
+$neutral-400:#473650;
+$neutral-500:#190424;
+$neutral-600:#170421;
+$neutral-700:#12031a;
+$neutral-800:#0e0214;
+$neutral-900:#0b020f;
+//======
+
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -298,10 +312,57 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+
+// ===自訂===
+$primary-50:#fef0eb ;
+$primary-100:#fbcfc0;
+$primary-200:#f9b8a1;
+$primary-300:#f69876;
+$primary-400:#f4845c;
+$primary-500:#f16533;
+$primary-600:#db5c2e;
+$primary-700:#ab4824;
+$primary-800:#85381c;
+$primary-900:#652a15;
+$primary:$primary-500;
+
+$secondary-50:#fefbeb;
+$secondary-100:#fbf3c0;
+$secondary-200:#f9eda1;
+$secondary-300:#f6e476;
+$secondary-400:#f4df5c;
+$secondary-500:#f1d733;
+$secondary-600:#dbc42e;
+$secondary-700:#ab9924;
+$secondary-800:#85761c;
+$secondary-900:#655a15;
+$secondary:$secondary-500;
+
+$accent-50:#fcfeeb;
+$accent-100:#f7fbc0;
+$accent-200:#f3f9a1;
+$accent-300:#eef676;
+$accent-400:#eaf45c;
+$accent-500:#e5f133;
+$accent-600:#d0db2e;
+$accent-700:#a3ab24;
+$accent-800:#7e851c;
+$accent-900:#606515;
+
+$info-free-300:#47d798;
+
+$info-subscription-300:#e53e9f;
+$info:$info-subscription-300;
+
+$info-purple-200:#dbd8f3;
+$info-purple-300:#8b82d8;
+$info-purple-500:#6f68ad;
+// ======
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+// $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
@@ -310,6 +371,62 @@ $dark:          $gray-900 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+
+//===自訂===
+  "primary-50":$primary-50,
+  "primary-100":$primary-100,
+  "primary-200":$primary-200,
+  "primary-300":$primary-300,
+  "primary-400":$primary-400,
+  "primary-500":$primary-500,
+  "primary-600":$primary-600,
+  "primary-700":$primary-700,
+  "primary-800":$primary-800,
+  "primary-900":$primary-900,
+
+  "secondary-50":$secondary-50,
+  "secondary-100":$secondary-100,
+  "secondary-200":$secondary-200,
+  "secondary-300":$secondary-300,
+  "secondary-400":$secondary-400,
+  "secondary-500":$secondary-500,
+  "secondary-600":$secondary-600,
+  "secondary-700":$secondary-700,
+  "secondary-800":$secondary-800,
+  "secondary-900":$secondary-900,
+
+  "accent-50":$accent-50,
+  "accent-100":$accent-100,
+  "accent-200":$accent-200,
+  "accent-300":$accent-300,
+  "accent-400":$accent-400,
+  "accent-500":$accent-500,
+  "accent-600":$accent-600,
+  "accent-700":$accent-700,
+  "accent-800":$accent-800,
+  "accent-900":$accent-900,
+
+  "info-free-300":$info-free-300,
+
+  "info-subscription-300":$info-subscription-300,
+
+  "info-purple-200":$info-purple-200,
+  "info-purple-300":$info-purple-200,
+  "info-purple-500":$info-purple-200,
+
+  "neutral-50":$neutral-50,
+  "neutral-100":$neutral-100,
+  "neutral-200":$neutral-200,
+  "neutral-300":$neutral-300,
+  "neutral-400":$neutral-400,
+  "neutral-500":$neutral-500,
+  "neutral-600":$neutral-600,
+  "neutral-700":$neutral-700,
+  "neutral-800":$neutral-800,
+  "neutral-900":$neutral-900,
+
+//======
+
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
@@ -378,7 +495,8 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+$enable-rfs:                  false !default;
+// $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -409,12 +527,28 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+
+//===自訂===
+  0: 0, //0px
+  1: $spacer * .25, //4px
+  2: $spacer * .5, //8px
+  3: $spacer * .75, //12px
+  4: $spacer, //16px
+  5: $spacer * 1.25, //20px
+  6: $spacer * 1.5, //24px
+  7: $spacer * 1.75, //28px
+  8: $spacer * 2, //32px
+  9: $spacer * 2.25, //36px
+  10: $spacer * 3, //48px
+  11: $spacer * 6, //96px
+//======
+
+  // 0: 0,
+  // 1: $spacer * .25,
+  // 2: $spacer * .5,
+  // 3: $spacer,
+  // 4: $spacer * 1.5,
+  // 5: $spacer * 3,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -544,12 +678,16 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
+$border-radius:               .5rem !default; //8px = rounder-2
+// $border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default; //4px = rounder-1
+$border-radius-lg:            .75rem !default; //12px = rounder-2
+// $border-radius-lg:            .5rem !default;
+$border-radius-xl:            1.5rem !default; //24px = rounder-4
+// $border-radius-xl:            1rem !default;
 $border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius-pill:          6.25rem !default; //100px = rounder-pill
+// $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
@@ -603,7 +741,9 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-family-sans-serif:      "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -640,12 +780,25 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+
+// ===自訂===
+  1: $font-size-base * 2.5, //40px = 5xl
+  2: $font-size-base * 2, //32px = 4xl
+  3: $font-size-base * 1.75, //28px = 3xl
+  4: $font-size-base * 1.5, //24px = 2xl
+  5: $font-size-base * 1.25, //20px = xl
+  6: $font-size-base * 1.125, //18px = lg
+  7: $font-size-base * 1, //16px = base
+  8: $font-size-base * 0.875, //14px = sm
+  9: $font-size-base * 0.75, //12px = xs
+// ======
+
+  // 1: $h1-font-size,
+  // 2: $h2-font-size,
+  // 3: $h3-font-size,
+  // 4: $h4-font-size,
+  // 5: $h5-font-size,
+  // 6: $h6-font-size
 ) !default;
 // scss-docs-end font-sizes
 
