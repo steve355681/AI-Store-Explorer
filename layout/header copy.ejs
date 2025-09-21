@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<nav class="navbar navbar-expand bg-neutral-900 border-bottom header-blur">
+  <div class="container-fluid px-4">
+    <!-- 左：Logo + 品牌 -->
+    <a class="navbar-brand" href="index.html">
+      <img src="../assets/images/logo_Mobile.png" alt="AI探店 Logo"
+            width="88" height="29" class="object-fit-contain">
+    </a>
+
+    <!-- 右：登入/註冊 + 菜單 -->
+    <div class="d-flex align-items-center gap-2 ms-auto">
+      <a href="#" class="btn btn-login px-4 py-3 fs-8">登入 / 註冊</a>
+
+      <!-- 圓形漢堡 -->
+        <button class="btn icon-btn p-0" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="主選單">
+            <i class="bi bi-list fs-5"></i>
+        </button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Offcanvas：從 header 下方展開 -->
+<div id="offcanvasMenu"
+     class="offcanvas offcanvas-end offcanvas-under-header text-bg-dark bg-neutral-700"
+     tabindex="-1" aria-labelledby="offcanvasMenuLabel"
+     data-bs-scroll="true" data-bs-backdrop="true">
+  <div class="d-flex flex-column justify-content-start">
+    <ul class="list-unstyled mx-auto my-0 menu-stack text-center">
+      <li><a href="#" class="menu-link d-block py-3 fs-6 mt-2">AI工具箱</a></li>
+      <li><a href="#" class="menu-link d-block py-3 fs-6">關於我們</a></li>
+      <li><a href="#" class="menu-link d-block py-3 fs-6">工具比較</a></li>
+    </ul>
+  </div>
+</div>
