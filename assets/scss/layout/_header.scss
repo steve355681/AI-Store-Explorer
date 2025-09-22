@@ -1,4 +1,82 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+/* Header 底色與分隔線（貼近你的截圖） */
+.header-blur {
+  background: $neutral-900;                     // 深色底
+  border-color: rgba($neutral-300, .12);        // 細緣線
 }
+
+/* 桌面導覽樣式（置中） */
+.navbar-nav .nav-link.nav-desktop {
+  color: $neutral-100;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .15s ease;
+
+  &:hover,
+  &:focus {
+    color: $neutral-50;
+    text-decoration: none;
+  }
+}
+
+/* 膠囊登入/註冊（橘色漸層） */
+.btn-login {
+  @extend .btn;
+  border: 0;
+  border-radius: $border-radius-pill;
+  color: $neutral-50;
+  background: linear-gradient(90deg, $primary-300 0%, $primary-600 100%);
+  transition: filter .2s ease, transform .05s ease;
+
+  &:hover { filter: brightness(1.05); }
+  &:active { transform: translateY(1px); }
+}
+
+/* 手機漢堡：white 10% 半透明底 */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: $border-radius-pill;
+  background: rgba($white, .1);
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; transition: background-color .2s ease, transform .05s ease;
+
+  i { color: $neutral-50; line-height: 1; }
+  &:hover { background: rgba($white, .2); }
+  &:active { transform: translateY(1px); }
+}
+
+/* ===== 手機 Offcanvas（不遮 header） ===== */
+:root { --header-h: 64px; } // 依實際 header 調整
+
+.offcanvas-under-header {
+  position: fixed !important;
+  top: var(--header-h) !important;
+  height: calc(100dvh - var(--header-h)) !important;
+  --bs-offcanvas-width: 100vw;  // 手機滿版
+  inset-inline-end: 0;
+  background-color: $neutral-900;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.offcanvas-backdrop {
+  top: var(--header-h) !important;
+  height: calc(100dvh - var(--header-h)) !important;
+  background-color: rgba($neutral-900, .6);
+  &.show { opacity: 1; }
+}
+
+/* 手機選單項目：neutral-100 + 無底線 */
+.menu-stack .menu-link {
+  color: $neutral-100;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $neutral-50;
+    text-decoration: none;
+  }
+}
+
+/* 置中導覽的間距（保守用 gap-7，對應 28px；若你編譯出更大 gap 也可改） */
+/* 若希望桌面更寬：@media (min-width: 1200px) { .navbar-nav.d-lg-flex { column-gap: map-get($spacers, 8); } } */
